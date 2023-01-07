@@ -1,0 +1,46 @@
+body {
+  background-color: #202120;
+  color: #e8eaed;
+  font-family: "Manrope", sans-serif;
+}
+section {
+  display: flex;
+  flex-direction: row;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.modules,
+.grades,
+.credits {
+  display: flex;
+  flex-direction: column;
+}
+
+.l5-ginput,
+.l6-ginput,
+.glabel,
+.mod-cred {
+  height: 42px;
+  margin: 5px 20px;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+}
+
+.mod-cred {
+  min-height: 44px;
+}
+
+.glabel {
+  min-height: 46px;
+}
+
+.l5-ginput,
+.l6-ginput {
+  margin-left: 20px;
+  max-width: 60px;
+  text-align: center;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" class="rel" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="grade-form">
+      <div id="level-5">
+        <h2>Level 5</h2>
+
+        <div class="container">
+          <div class="modules">
+            <label for="essentials01" class="glabel"
+              >Essentials <br />
+              SCA 1:
+            </label>
+            <label for="essentials02" class="glabel">Essentials SCA 2: </label>
+            <label for="pd01" class="glabel">Pro. Dev. SCA 1: </label>
+            <label for="pd02" class="glabel">Pro. Dev. SCA 2: </label>
+            <label for="ccs01" class="glabel">CCS SCA 1: </label>
+            <label for="ccs02" class="glabel">CCS SCA 2: </label>
+            <label for="lp01" class="glabel">Live Projects SCA 1: </label>
+            <label for="lp02" class="glabel">Live Projects SCA 2: </label>
+          </div>
+          <div class="credits">
+            <span class="mod-cred">22.5</span>
+            <span class="mod-cred">22.5</span>
+            <span class="mod-cred">3.75</span>
+            <span class="mod-cred">11.25</span>
+            <span class="mod-cred">9</span>
+            <span class="mod-cred">21</span>
+            <span class="mod-cred">16.5</span>
+            <span class="mod-cred">13.5</span>
+          </div>
+          <div class="grades">
+            <input type="number" class="l5-ginput" name="essentials01" id="essentials01" />
+            <input type="number" class="l5-ginput" name="essentials02" id="essentials02" />
+            <input type="number" class="l5-ginput" name="pd01" id="pd01" />
+            <input type="number" class="l5-ginput" name="pd02" id="pd02" />
+            <input type="number" class="l5-ginput" name="ccs01" id="ccs01" />
+            <input type="number" class="l5-ginput" name="ccs02" id="ccs02" />
+            <input type="number" class="l5-ginput" name="lp01" id="lp01" />
+            <input type="number" class="l5-ginput" name="lp02" id="lp02" />
+          </div>
+        </div>
+      </div>
+
+      <div id="level-6">
+        <h2>Level 6</h2>
+        <div class="container">
+          <div class="modules">
+            <label for="essentials01" class="glabel"
+              >Essentials <br />
+              SCA 1:
+            </label>
+            <label for="essentials02" class="glabel">Essentials SCA 2: </label>
+            <label for="pd01" class="glabel">Pro. Dev. SCA 1: </label>
+            <label for="pd02" class="glabel">Pro. Dev. SCA 2: </label>
+            <label for="ccs01" class="glabel">CCS SCA 1: </label>
+            <label for="ccs02" class="glabel">CCS SCA 2: </label>
+            <label for="lp01" class="glabel">Live Projects SCA 1: </label>
+            <label for="lp02" class="glabel">Live Projects SCA 2: </label>
+          </div>
+          <div class="credits">
+            <span class="mod-cred">22.5</span>
+            <span class="mod-cred">22.5</span>
+            <span class="mod-cred">3.75</span>
+            <span class="mod-cred">11.25</span>
+            <span class="mod-cred">9</span>
+            <span class="mod-cred">21</span>
+            <span class="mod-cred">16.5</span>
+            <span class="mod-cred">13.5</span>
+          </div>
+          <div class="grades">
+            <input type="number" class="l6-ginput" name="essentials01" id="essentials01" />
+            <input type="number" class="l6-ginput" name="essentials02" id="essentials02" />
+            <input type="number" class="l6-ginput" name="pd01" id="pd01" />
+            <input type="number" class="l6-ginput" name="pd02" id="pd02" />
+            <input type="number" class="l6-ginput" name="ccs01" id="ccs01" />
+            <input type="number" class="l6-ginput" name="ccs02" id="ccs02" />
+            <input type="number" class="l6-ginput" name="lp01" id="lp01" />
+            <input type="number" class="l6-ginput" name="lp02" id="lp02" />
+          </div>
+        </div>
+        <button onclick="popGrades()">Populate</button>
+        <button onclick="calcClass()">Calculate</button>
+      </div>
+    </section>
+    <script src="calc.js"></script>
+  </body>
+</html>
