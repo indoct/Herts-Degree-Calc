@@ -24,6 +24,11 @@ h2 {
   flex-direction: column;
 }
 
+a {
+  color: yellow;
+  /* font-weight: bold; */
+}
+
 .l5-ginput,
 .l6-ginput,
 .glabel,
@@ -54,7 +59,7 @@ h2 {
 .buttons-row {
   display: flex;
   flex-direction: row;
-  padding-top: 40px;
+  padding-top: 10px;
   justify-content: center;
 }
 
@@ -74,4 +79,14 @@ button:hover {
 .note {
   width: 60%;
   margin: 40px auto 20px;
+}
+
+.text-row {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.degree-output {
+  font-size: 24px;
+  color: yellow;
 }

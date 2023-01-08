@@ -1,4 +1,4 @@
-let l5GradesArr = [[22.5], [22.5], [3.75], [11.25], [16.5], [13.5], [9], [21]];
+let l5GradesArr = [[22.5], [22.5], [3.75], [11.25], [9], [21], [16.5], [13.5]];
 let l6GradesArr = [[12], [18], [9], [21], [15], [15], [30]];
 let sum = 0;
 let ind60 = 0;
@@ -18,10 +18,10 @@ let valid = false;
 function popGrades() {
   document
     .querySelectorAll(".l5-ginput")
-    .forEach((item) => (item.value = Math.floor(Math.random() * (77 - 52)) + 52));
+    .forEach((item) => (item.value = Math.floor(Math.random() * (78 - 42)) + 42));
   document
     .querySelectorAll(".l6-ginput")
-    .forEach((item) => (item.value = Math.floor(Math.random() * (77 - 52)) + 52));
+    .forEach((item) => (item.value = Math.floor(Math.random() * (78 - 42)) + 42));
 }
 
 function checkInput() {
@@ -98,11 +98,9 @@ function sortLevel6() {
   // Remove + store ringfenced modules
   sum = 0;
   let ccs = l6GradesArr.splice(2, 2);
-  console.log(ccs);
 
   // Sort the remainder
   l6SortedGrades = l6GradesArr.sort((a, b) => b[1] - a[1]);
-  // console.log(l6SortedGrades);
 
   // Credit Weight array
   for (let i = 0; i < l6SortedGrades.length; i++) {
@@ -154,7 +152,7 @@ function clearInputs() {
 }
 
 function reset() {
-  l5GradesArr = [[22.5], [22.5], [3.75], [11.25], [16.5], [13.5], [9], [21]];
+  l5GradesArr = [[22.5], [22.5], [3.75], [11.25], [9], [21], [16.5], [13.5]];
   l6GradesArr = [[12], [18], [9], [21], [15], [15], [30]];
   sum = 0;
   ind60 = 0;
@@ -180,14 +178,22 @@ function roundTo(n) {
 
 const degClass = () => {
   let finalGrade = (level5 *= 0.25) + (level6 *= 0.75);
-  if (finalGrade >= 69.5) return roundTo(finalGrade) + "% First Class Honours (1)";
+  console.log(finalGrade);
+  if (finalGrade >= 69.5)
+    document.querySelector(".degree-output").textContent =
+      roundTo(finalGrade) + "%: First Class Honours (1)";
   if (finalGrade >= 59.5 && finalGrade < 69.5)
-    return roundTo(finalGrade) + "% Upper Second Class Honours (2.1)";
+    document.querySelector(".degree-output").textContent =
+      roundTo(finalGrade) + "%: Upper Second Class Honours (2.1)";
   if (finalGrade >= 49.5 && finalGrade < 59.5)
-    return roundTo(finalGrade) + "% Lower Second Class Honours (2.2)";
+    document.querySelector(".degree-output").textContent =
+      roundTo(finalGrade) + "%: Lower Second Class Honours (2.2)";
   if (finalGrade >= 39.5 && finalGrade < 49.5)
-    return roundTo(finalGrade) + "% Third Class Honours (3)";
-  if (finalGrade < 39.5) return roundTo(finalGrade) + "% Degree Requirements failed :(";
+    document.querySelector(".degree-output").textContent =
+      roundTo(finalGrade) + "%: Third Class Honours (3)";
+  if (finalGrade < 39.5)
+    document.querySelector(".degree-output").textContent =
+      roundTo(finalGrade) + "% Degree Requirements failed :(";
 };
 
 function calcClass() {
@@ -198,10 +204,6 @@ function calcClass() {
     sortGrades();
     sortLevel6();
     weightedAvg();
-    console.log("L5 gradesArr: " + l5GradesArr);
-    console.log("L6 gradesArr: " + l6GradesArr);
-    console.log("L5 sortedGrades: " + l5SortedGrades);
-    console.log("L6 sortedGrades: " + l6SortedGrades);
-    console.log(degClass());
+    degClass();
   }
 }
