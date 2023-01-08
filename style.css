@@ -1,4 +1,5 @@
-body {
+body,
+button {
   background-color: #202120;
   color: #e8eaed;
   font-family: "Manrope", sans-serif;
@@ -6,12 +7,16 @@ body {
 section {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 .container {
   display: flex;
   flex-direction: row;
 }
 
+h2 {
+  padding-left: 20px;
+}
 .modules,
 .grades,
 .credits {
@@ -31,11 +36,12 @@ section {
 }
 
 .mod-cred {
-  min-height: 44px;
+  min-height: 46px;
 }
 
 .glabel {
   min-height: 46px;
+  min-width: 201px;
 }
 
 .l5-ginput,
@@ -43,4 +49,29 @@ section {
   margin-left: 20px;
   max-width: 60px;
   text-align: center;
+}
+
+.buttons-row {
+  display: flex;
+  flex-direction: row;
+  padding-top: 40px;
+  justify-content: center;
+}
+
+button {
+  padding: 15px 20px;
+  margin: 10px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.ring {
+  color: red;
+}
+
+.note {
+  width: 60%;
+  margin: 40px auto 20px;
 }
