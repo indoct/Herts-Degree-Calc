@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" class="rel" />
+    <link rel="stylesheet" href="css/skeleton.css" class="rel" />
+    <link rel="stylesheet" href="css/normalize.css" class="rel" />
+    <link rel="stylesheet" href="css/style.css" class="rel" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,16 +16,120 @@
     <title>Herts IDI Design / Illustration Degree Calculator</title>
   </head>
   <body>
-    <p class="note">
+    <section>
+      <div class="container">
+        <p>
+          Note: Level 6 Critical & Cultural Studies are <span class="ring">ringfenced</span>. That
+          means they are ALWAYS included in the degree classification calculation - even if they're
+          not the best 90 credits from L6!
+        </p>
+        <div class="row pad">
+          <div class="one-half column">
+            <h4>Level 5</h4>
+            <div class="calc-container">
+              <div class="modules">
+                <label for="essentials01" class="glabel">Essentials SCA 1: </label>
+                <label for="essentials02" class="glabel">Essentials SCA 2: </label>
+                <label for="pd01" class="glabel">Professional Dev. SCA 1: </label>
+                <label for="pd02" class="glabel">Professional Dev. SCA 2: </label>
+                <label for="ccs01" class="glabel">CCS SCA 1: </label>
+                <label for="ccs02" class="glabel">CCS SCA 2: </label>
+                <label for="lp01" class="glabel">Live Projects SCA 1: </label>
+                <label for="lp02" class="glabel">Live Projects SCA 2: </label>
+              </div>
+              <div class="credits">
+                <span class="mod-cred">22.5</span>
+                <span class="mod-cred">22.5</span>
+                <span class="mod-cred">3.75</span>
+                <span class="mod-cred">11.25</span>
+                <span class="mod-cred">9</span>
+                <span class="mod-cred">21</span>
+                <span class="mod-cred">16.5</span>
+                <span class="mod-cred">13.5</span>
+              </div>
+              <div class="grades">
+                <input type="number" class="l5-ginput" name="essentials01" id="essentials01" />
+                <input type="number" class="l5-ginput" name="essentials02" id="essentials02" />
+                <input type="number" class="l5-ginput" name="pd01" id="pd01" />
+                <input type="number" class="l5-ginput" name="pd02" id="pd02" />
+                <input type="number" class="l5-ginput" name="ccs01" id="ccs01" />
+                <input type="number" class="l5-ginput" name="ccs02" id="ccs02" />
+                <input type="number" class="l5-ginput" name="lp01" id="lp01" />
+                <input type="number" class="l5-ginput" name="lp02" id="lp02" />
+              </div>
+            </div>
+          </div>
+          <div class="one-half column">
+            <h4>Level 6</h4>
+            <div class="calc-container">
+              <div class="modules">
+                <label for="ap101" class="glabel">Advanced Practice SCA 1: </label>
+                <label for="ap102" class="glabel">Advanced Practice SCA 2 </label>
+                <label for="ccs01" class="glabel ring">L6 CCS SCA 1: </label>
+                <label for="ccs02" class="glabel ring">L6 CCS SCA 2: </label>
+                <label for="ap201" class="glabel">Advanced Practice 2 SCA 1: </label>
+                <label for="ap202" class="glabel">Advanced Practice 2 SCA 2: </label>
+                <label for="ap203" class="glabel">Advanced Practice 2 SCA 3: </label>
+              </div>
+              <div class="credits">
+                <span class="mod-cred">12</span>
+                <span class="mod-cred">18</span>
+                <span class="mod-cred">9</span>
+                <span class="mod-cred">21</span>
+                <span class="mod-cred">15</span>
+                <span class="mod-cred">15</span>
+                <span class="mod-cred">30</span>
+              </div>
+              <div class="grades">
+                <input type="number" class="l6-ginput" name="ap101" id="ap101" />
+                <input type="number" class="l6-ginput" name="ap102" id="ap102" />
+                <input type="number" class="l6-ginput" name="ccs01" id="ccs01" />
+                <input type="number" class="l6-ginput" name="ccs02" id="ccs02" />
+                <input type="number" class="l6-ginput" name="ap201" id="ap201" />
+                <input type="number" class="l6-ginput" name="ap202" id="ap202" />
+                <input type="number" class="l6-ginput" name="ap203" id="ap203" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <p class="text-row">
+        Degree Classification Boundaries & Calculation Method:
+        <a
+          href="https://www.herts.ac.uk/study/how-to-apply/honours-classification-bachelors-degree"
+          target="_blank"
+          >Click Here</a
+        >
+      </p>
+      <p class="text-row">
+        Please note: there may be a slight overestimation. If the grade given is within 1 point of
+        the boundary (e.g. 59-61), let me know on Slack and we can check manually.
+      </p>
+      <p class="degree-output"></p>
+    </div>
+    <div class="buttons-row">
+      <!-- <button onclick="popGrades()">Populate</button> -->
+      <!-- <button onclick="getGrades()">Get Grades</button>
+      <button onclick="sortGrades()">Sort L5</button>
+      <button onclick="sortLevel6()">Sort L6</button> -->
+      <button onclick="calcClass()">Calculate</button>
+      <button onclick="clearInputs()">Clear Form</button>
+    </div>
+    <script src="calc.js"></script>
+  </body>
+</html>
+<!-- <p class="note">
       Note: Level 6 Critical & Cultural Studies are <span class="ring">ringfenced</span>. That means
       they are ALWAYS included in the degree classification calculation - even if they're not the
       best 90 credits from L6!
     </p>
     <section id="grade-form">
       <div id="level-5">
-        <h2>Level 5</h2>
-
-        <div class="container">
+        <h4>Level 5</h4> -->
+<!-- 
+        <div class="calc-container">
           <div class="modules">
             <label for="essentials01" class="glabel">Essentials SCA 1: </label>
             <label for="essentials02" class="glabel">Essentials SCA 2: </label>
@@ -54,12 +160,12 @@
             <input type="number" class="l5-ginput" name="lp01" id="lp01" />
             <input type="number" class="l5-ginput" name="lp02" id="lp02" />
           </div>
-        </div>
-      </div>
+        </div> -->
+<!-- </div>
 
       <div id="level-6">
-        <h2>Level 6</h2>
-        <div class="container">
+        <h4>Level 6</h4> -->
+<!-- <div class="calc-container">
           <div class="modules">
             <label for="ap101" class="glabel">Advanced Practice SCA 1: </label>
             <label for="ap102" class="glabel">Advanced Practice SCA 2 </label>
@@ -87,30 +193,6 @@
             <input type="number" class="l6-ginput" name="ap202" id="ap202" />
             <input type="number" class="l6-ginput" name="ap203" id="ap203" />
           </div>
-        </div>
-      </div>
-    </section>
-    <div class="text-row">
-      <p>
-        Degree Classification Boundaries & Calculation Method:
-        <a
-          href="https://www.herts.ac.uk/study/how-to-apply/honours-classification-bachelors-degree"
-          target="_blank"
-          >Click Here</a
-        >
-        <br /><br />Please note: there may be a slight overestimation. If the grade given is within
-        1 point of the boundary (e.g. 59-61), let me know on Slack and we can check manually.
-      </p>
-      <p class="degree-output"></p>
-    </div>
-    <div class="buttons-row">
-      <!-- <button onclick="popGrades()">Populate</button> -->
-      <!-- <button onclick="getGrades()">Get Grades</button>
-      <button onclick="sortGrades()">Sort L5</button>
-      <button onclick="sortLevel6()">Sort L6</button> -->
-      <button onclick="calcClass()">Calculate</button>
-      <button onclick="clearInputs()">Clear Form</button>
-    </div>
-    <script src="calc.js"></script>
-  </body>
-</html>
+        </div> -->
+<!-- </div>
+    </section> -->
