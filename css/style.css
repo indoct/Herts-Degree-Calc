@@ -14,9 +14,6 @@ section {
   flex-direction: row;
 }
 
-h2 {
-  padding-left: 20px;
-}
 .modules,
 .grades,
 .credits {
